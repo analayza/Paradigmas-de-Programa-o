@@ -1015,10 +1015,10 @@ public class Main {
 
         for (int i = 0; i < calibradores.size(); i++) {
             //List<String> concatenacao = new ArrayList<>();
-            String x = calibradores.get(i);
+            String palavra = calibradores.get(i);
 
-            for (int j = 0; j < x.length(); j++) {
-                char caracter = x.charAt(j);
+            for (int j = 0; j < palavra.length(); j++) {
+                char caracter = palavra.charAt(j);
                 if (Character.isDigit(caracter)) {
                     //System.out.println(caracter);
                     //concatenacao.add(String.valueOf(caracter));
@@ -1026,8 +1026,8 @@ public class Main {
                     break;
                 }
             }
-            for (int k = x.length() - 1; k >= 0; k--) {
-                char caracter = x.charAt(k);
+            for (int k = palavra.length() - 1; k >= 0; k--) {
+                char caracter = palavra.charAt(k);
                 if (Character.isDigit(caracter)) {
                     //System.out.println(caracter);
                     //concatenacao.add(String.valueOf(caracter));
