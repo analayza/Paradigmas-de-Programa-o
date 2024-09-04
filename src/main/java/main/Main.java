@@ -1008,20 +1008,89 @@ public class Main {
                 "fbbdeightzzsdffh8jbjzxkclj",
                 "3nine6five1"));
 
+
+        for(int i = 0; i< calibradores.size(); i++){
+            String novo = calibradores.get(i);
+
+            if(novo.contains("oneight")){
+                novo = novo.replace("oneight", "18");
+            }
+            if(novo.contains("twone")){
+                novo =  novo.replace("twone" , "21");
+
+            }
+            if(novo.contains("fiveeight")){
+                novo =  novo.replace("fiveeight" , "58");
+
+            }
+            if(novo.contains("nineight")){
+                novo =  novo.replace("nineight" , "98");
+
+            }
+            if(novo.contains("sevenine")){
+                novo =  novo.replace("sevenine" , "79");
+
+            }
+            if(novo.contains("eightwo")){
+                novo =  novo.replace("eightwo" , "82");
+
+            }
+            if(novo.contains("eighthree")){
+                novo =  novo.replace("eighthree" , "83");
+
+            }
+            if(novo.contains("one")){
+                novo =  novo.replace("one" , "1");
+
+            }
+            if(novo.contains("two")){
+                novo =  novo.replace("two" , "2");
+
+            }
+            if(novo.contains("three")){
+                novo =  novo.replace("three" , "3");
+
+            }
+            if(novo.contains("four")){
+                novo =  novo.replace("four" , "4");
+
+            }
+            if(novo.contains("five")){
+                novo =  novo.replace("five" , "5");
+
+            }
+            if(novo.contains("six")){
+                novo =  novo.replace("six" , "6");
+
+            }
+            if(novo.contains("seven")){
+                novo =  novo.replace("seven" , "7");
+
+            }
+            if(novo.contains("eight")){
+                novo =  novo.replace("eight" , "8");
+
+            }
+            if(novo.contains("nine")){
+                novo =  novo.replace("nine" , "9");
+
+            }
+
+            calibradores.set(i, novo);
+
+        }
+
         String primeiroDigito = "";
         String segundoDigito = "";
 
         int somaTotal= 0;
 
         for (int i = 0; i < calibradores.size(); i++) {
-            //List<String> concatenacao = new ArrayList<>();
             String palavra = calibradores.get(i);
 
             for (int j = 0; j < palavra.length(); j++) {
                 char caracter = palavra.charAt(j);
                 if (Character.isDigit(caracter)) {
-                    //System.out.println(caracter);
-                    //concatenacao.add(String.valueOf(caracter));
                     primeiroDigito = String.valueOf(caracter);
                     break;
                 }
@@ -1029,8 +1098,6 @@ public class Main {
             for (int k = palavra.length() - 1; k >= 0; k--) {
                 char caracter = palavra.charAt(k);
                 if (Character.isDigit(caracter)) {
-                    //System.out.println(caracter);
-                    //concatenacao.add(String.valueOf(caracter));
                     segundoDigito = String.valueOf(caracter);
                     break;
                 }
@@ -1039,8 +1106,6 @@ public class Main {
             String con = primeiroDigito + segundoDigito;
             somaTotal+= Integer.parseInt(con);
             System.out.println(con);
-            //String con = concatenacao.get(0) + concatenacao.get(1);
-            //System.out.println(con);
         }
 
         System.out.println("--------------------------------------");
